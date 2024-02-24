@@ -9,13 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack{
+            MainTabView()
+        }
+        
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    
+                } label: {
+                    Circle()
+                        .frame(width: 40, height: 40)
+                }
+
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NavigationView{
+            ContentView()
+        }
     }
 }
